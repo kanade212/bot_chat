@@ -23,7 +23,7 @@ function callback (err, api)
 	api.listen(function callback(err, message)
 	{
 		
-		if(message.body === "stopchat"||message.body === "bye") { 
+		if(message.body === "stopchat"||message.body === "stop.chat") { 
 			api.sendMessage(";) Tạm biệt , bye!:(.", message.threadID); 
 			api.markAsRead(message.threadID);
 			return api.logout(err);
@@ -41,7 +41,7 @@ function callback (err, api)
 				if (err) return console.error(err);
 				for (var prop in ret) {
 					if (ret.hasOwnProperty(prop) && ret[prop].name) {
-						api.sendMessage("Xin lỗi " + ret[prop].name + ",Tôi là Shana , là bot AI của a ấy , Hiện tại a Tachibana Kanada đang bận , nếu bạn có gì muốn nói với a ấy , xin vui lòng nt tại đây: www.facebook.com/bot.kanade.tachibana212 or m.me/bot.kanade.tachibana212 ! Thank! ", prop, function(){
+						api.sendMessage("Xin lỗi " + ret[prop].name + ",Tôi là Shana , là bot AI của a ấy ,  Hiện tại mới có  " + h + " giờ " + phut + " phút nên a ấy còn đang bận học, nếu bạn có gì muốn nói với a ấy , xin vui lòng nt tại đây: www.facebook.com/bot.kanade.tachibana212 or m.me/bot.kanade.tachibana212 ! Thank! ", prop, function(){
 							answeredThreads[message.threadID] = true;
 						});
 					}
@@ -129,7 +129,7 @@ if ((h >= 0 && h <= 5)  && !answeredThreads.hasOwnProperty(message.threadID)) {
 			api.sendMessage("Không biết não bạn là cá vàng hay thiếu Iot nhỉ>?", message.threadID);
 			return;
 		}
-		else if(message.body === 'Tachibana oi' || message.body === 'Kanada oi' || message.body === 'Tachibana'|| message.body === 'tachibana'|| message.body === 'kanade'|| message.body === 'tachibana oi'|| message.body === 'kande oi'|| message.body === 'Tachibana ơi'|| message.body === 'Kanade ơi'|| message.body === 'Ban oi'|| message.body === 'ban oi'|| message.body === 'Ban oi!'|| message.body === 'ban oi!'|| message.body === 'ban ơi'|| message.body === 'Ban ơi'|| message.body === 'Bạn ơi'|| message.body === 'bạn ơi'|| message.body === 'bạn ơi!'|| message.body === 'Bạn ơi!' ) { 
+		else if(message.body === 'Tachibana oi' || message.body === 'Kanada oi' || message.body === 'Tachibana'|| message.body === 'tachibana'|| message.body === 'kanade'|| message.body === 'tachibana oi'|| message.body === 'kande oi'|| message.body === 'Tachibana ơi'|| message.body === 'Kanade ơi'|| message.body === 'Ban oi'|| message.body === 'ban oi'|| message.body === 'Ban oi!'|| message.body === 'ban oi!'|| message.body === 'ban ơi'|| message.body === 'Ban ơi'|| message.body === 'Bạn ơi'|| message.body === 'bạn ơi'|| message.body === 'bạn ơi!'|| message.body === 'Bạn ơi!'|| message.body === 'b ơi'|| message.body === 'b ơi' ) { 
 			console.log("FormID: " + message.threadID + '->Message: '+message.body);
 			api.sendMessage("Vâng ,Mình là Shana , là bot AI của a ấy , và cũng  là người yêu của a ấy , kaka!  có gì ko bạn ?", message.threadID);
 			api.sendMessage(" Mà  hiện tại a Tachibana đang bận ạ, có gì bạn cứ nói với mình là dc!", message.threadID);
@@ -171,7 +171,7 @@ if ((h >= 0 && h <= 5)  && !answeredThreads.hasOwnProperty(message.threadID)) {
 			api.sendMessage("Ok. Goodbye ban :)", message.threadID);
 			return;
 		}
-		else if(message.body === 'ban ten gi' ||message.body === 'Ten ban la gi'||message.body === 'ban ten la gi' ||message.body === 'Bạn tên là gì?'||message.body === 'Bạn tên là gì nhỉ?'||message.body === 'bạn tên là gì?'||message.body === 'bạn tên là gì nhỉ?'||message.body === 'tên bạn là gì?'||message.body === 'Tên bạn là gì?'||message.body === 'Bạn tên gì?'||message.body === 'Bạn tên gì'||message.body === 'bạn tên gì'||message.body === 'tên bạn là gì'||message.body === 'Tên  bạn là gì'||message.body === 'ten ban la gi') { 
+		else if(message.body === 'ban ten gi' ||message.body === 'Ten ban la gi'||message.body === 'ban ten la gi' ||message.body === 'Bạn tên là gì?'||message.body === 'Bạn tên là gì nhỉ?'||message.body === 'bạn tên là gì?'||message.body === 'bạn tên là gì nhỉ?'||message.body === 'tên bạn là gì?'||message.body === 'Tên bạn là gì?'||message.body === 'Bạn tên gì?'||message.body === 'Bạn tên gì'||message.body === 'bạn tên gì'||message.body === 'tên bạn là gì'||message.body === 'Tên  bạn là gì'||message.body === 'ten ban la gi'||message.body === 'ten b la gi'||message.body === 'tên b là gì'||message.body === 'b tên là gì'||message.body === 'b ten la gi') { 
 			console.log("FormID: " + message.threadID + '->Message: '+message.body);
 			api.sendMessage("Mình tên là Shana , Là bot AI của a Tachibana ạ:)", message.threadID);
 			return;
